@@ -38,9 +38,8 @@ public class Enemy : MonoBehaviour
             enemyDirection = 1;
         }
         }
-        void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Tuberias")
+
+         if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Tuberias")
         {
          if(enemyDirection == 1)
         {
@@ -51,13 +50,13 @@ public class Enemy : MonoBehaviour
             enemyDirection = 1;
         }
         }
-
+        
+        
         if(collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
         }
     }
-}
 
     public void GoombaDeath()
     {
@@ -66,7 +65,6 @@ public class Enemy : MonoBehaviour
         rBody.gravityScale = 0;
         enemyDirection = 0;
         Destroy(gameObject, 0.5f);
-
     }
 }
 
