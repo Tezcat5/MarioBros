@@ -10,18 +10,17 @@ public class Coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+         source = GetComponent<AudioSource>();
     }
-     void Awake()
-    {
-        source = GetComponent<AudioSource>();
-    }
+    
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        
+         if (collider.CompareTag("Player"))
         {
-            source.PlayOneShot(coin);
             Destroy(gameObject, 0.5f);
+
+            source.Play();
         }
     }
 

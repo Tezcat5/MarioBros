@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
             enemyDirection = 1;
         }
         
-        if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Tuberias")
+        if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Pared")
         {
          if(enemyDirection == 1)
         {
@@ -53,6 +53,8 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
+
+            source.Play();
         }
     }
 }
