@@ -25,7 +25,6 @@ public class Bandera : MonoBehaviour
     {   
         source.clip = victory;
         source.Play();
-
     }
     
 }

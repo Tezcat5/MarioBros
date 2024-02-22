@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goombas
   - Tuberias
+  - Bandera
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Pared
   - Water
   - UI
-  - 
+  - Bandera
   - 
   - 
   - 
