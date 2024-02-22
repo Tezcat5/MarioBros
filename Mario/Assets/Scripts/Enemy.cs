@@ -5,17 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private Rigidbody2D rBody;
-
-    public float enemySpeed = 5;
-
-    public float enemyDirection = 1;
-
+    public float enemySpeed = 2;
+    private float enemyDirection = 1;
+    public Animator anim;
+    private AudioSource source; 
     public AudioClip deathSound;
-
-    public BoxCollider2D boxCollider;
-
-    AudioSource source;
-
+    private BoxCollider2D boxCollider;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,19 +25,29 @@ public class Enemy : MonoBehaviour
     {
         rBody.velocity = new Vector2(enemyDirection * enemySpeed, rBody.velocity.y);
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 3 || collision.gameObject.tag == "Goombas")
+        if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Goombas")
         {
-            if(enemyDirection == 1)
-            {
+         if(enemyDirection == 1)
+        {
             enemyDirection = -1;
-            }
-            else if(enemyDirection == -1)
-            {
-                 enemyDirection = 1;
-            }
+        }
+        else if(enemyDirection == -1)
+        {
+            enemyDirection = 1;
+        }
+        
+        if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Tuberias")
+        {
+         if(enemyDirection == 1)
+        {
+            enemyDirection = -1;
+        }
+        else if(enemyDirection == -1)
+        {
+            enemyDirection = 1;
+        }
         }
 
         if(collision.gameObject.tag == "Player")
@@ -49,19 +55,17 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-    
+}
 
     public void GoombaDeath()
-    {    
+    {
         source.PlayOneShot(deathSound);
         boxCollider.enabled = false;
         rBody.gravityScale = 0;
         enemyDirection = 0;
         Destroy(gameObject, 0.5f);
+
     }
-
-
-
 }
 
 
