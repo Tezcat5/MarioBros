@@ -23,6 +23,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (rBody.velocity.x > -0.1f && rBody.velocity.x < 0.1f)
+        {
+            enemySpeed = -enemySpeed;
+        }
         rBody.velocity = new Vector2(enemyDirection * enemySpeed, rBody.velocity.y);
     }
     void OnCollisionEnter2D(Collision2D collision)
