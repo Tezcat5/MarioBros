@@ -56,6 +56,9 @@ public class Enemy : MonoBehaviour
         rBody.gravityScale = 0;
         enemyDirection = 0;
         Destroy(gameObject, 0.5f);
+        CountManager count = GameObject.FindObjectOfType<CountManager>();
+        count.LoadGoombaCount();
+        
     }
 }
 
