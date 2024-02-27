@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class PlayerFall : MonoBehaviour
+
 {
     private Rigidbody2D rBody;
     public float enemySpeed = 2;
@@ -33,7 +34,29 @@ public class Enemy : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Goombas")
+        {
+         if(enemyDirection == 1)
+        {
+            enemyDirection = -1;
+        }
+        else if(enemyDirection == -1)
+        {
+            enemyDirection = 1;
+        }
+        }
+
+         if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Tuberias")
+        {
+         if(enemyDirection == 1)
+        {
+            enemyDirection = -1;
+        }
+        else if(enemyDirection == -1)
+        {
+            enemyDirection = 1;
+        }
+        }
         
         
         if(collision.gameObject.tag == "Player")
@@ -58,5 +81,3 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 }
-
-
