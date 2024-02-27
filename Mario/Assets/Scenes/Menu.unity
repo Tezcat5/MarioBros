@@ -246,7 +246,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &42581750
@@ -761,7 +761,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 428204613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.00000017881393, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.34451762, g: 0.8977921, b: 0.9245283, a: 1}
+  m_Color: {r: 0, g: 0.7598862, b: 0.990566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1254,7 +1254,7 @@ RectTransform:
   m_Father: {fileID: 359415437}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.63777244}
-  m_AnchorMax: {x: 1, y: 0.99999994}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3170,7 +3170,7 @@ GameObject:
   - component: {fileID: 1412258547}
   - component: {fileID: 1412258549}
   m_Layer: 5
-  m_Name: puntuacionText
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3192,7 +3192,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669.4115, y: 358.45718}
+  m_AnchoredPosition: {x: -669.4115, y: 406}
   m_SizeDelta: {x: 495.1768, y: 59.0856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412258547
@@ -3216,8 +3216,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_Font: {fileID: 12800000, guid: ae6b6814d87a88f448a72e78087a9ea4, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3228,7 +3228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Puntuaci\xF3n:"
+  m_Text: 'Score:'
 --- !u!222 &1412258548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3246,7 +3246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412258545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3974ec4bcbe782a4db612e62ba1c9e33, type: 3}
+  m_Script: {fileID: 11500000, guid: dadc7b980377cf344808f360ec923067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoureText: {fileID: 1412258547}
@@ -3585,7 +3585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db5b341bb08252d449d9b4b41a018c55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62d773494ae4476478cd614ac585836f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3900,7 +3900,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fa486ef28e92ffa4290bc72a7185b5f4, type: 3}
+    m_Font: {fileID: 12800000, guid: ae6b6814d87a88f448a72e78087a9ea4, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 417267247}
   m_Direction: 0
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4082,7 +4082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.84598, y: -37.68133}
+  m_AnchoredPosition: {x: 114.846, y: -37.68135}
   m_SizeDelta: {x: 229.692, y: 75.3627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866883578
@@ -4216,7 +4216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128138868}
+      - m_Target: {fileID: 2128138870}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadFirstLevel
         m_Mode: 1
@@ -4400,7 +4400,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fa486ef28e92ffa4290bc72a7185b5f4, type: 3}
+    m_Font: {fileID: 12800000, guid: ae6b6814d87a88f448a72e78087a9ea4, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -4479,7 +4479,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fa486ef28e92ffa4290bc72a7185b5f4, type: 3}
+    m_Font: {fileID: 12800000, guid: ae6b6814d87a88f448a72e78087a9ea4, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -4782,7 +4782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128138869}
-  - component: {fileID: 2128138868}
+  - component: {fileID: 2128138870}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -4790,20 +4790,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2128138868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128138867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3974ec4bcbe782a4db612e62ba1c9e33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoureText: {fileID: 1412258547}
-  score: 0
 --- !u!4 &2128138869
 Transform:
   m_ObjectHideFlags: 0
@@ -4819,6 +4805,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128138870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128138867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadc7b980377cf344808f360ec923067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoureText: {fileID: 1412258547}
+  score: 0
 --- !u!1 &2140948657
 GameObject:
   m_ObjectHideFlags: 0
