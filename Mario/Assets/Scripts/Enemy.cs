@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -60,6 +62,13 @@ public class Enemy : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+
+        
+        if(collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("Game over");
+        }
+
     }
 
     public void GoombaDeath()
